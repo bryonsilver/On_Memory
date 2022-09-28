@@ -170,4 +170,5 @@
 @media (max-width: 350px) {
     .main_center {width: 90% !important;}
     .sd_option {transform: translateX(-9px); width: 80%;}
+    .s_input {padding-right: 28px;}
 }
