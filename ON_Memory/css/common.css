@@ -122,8 +122,9 @@ span {
     box-sizing: border-box;
     background-color: #fff;
     position: absolute;
-    top: 52px;
+    top: 38px;
     left: 0;
+    z-index: 99;
     border: 1px solid #ccc;
     border-top: 0;
     text-align: center;
@@ -300,6 +301,7 @@ span {
     .h_top > a:nth-of-type(3) {
         display: none;
     }
+    .sd_ul {top: 32px;}
 }
 @media (max-width: 680px) {
     .s_dropdown {width: 24%;}
