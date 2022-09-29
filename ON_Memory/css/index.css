@@ -156,10 +156,6 @@
     .main_center {width: 80% !important;}
     .sd_option {transform: translateX(-10px);}
     .search_dropdown {width: 180px;}
-    .f_top {flex-wrap: wrap; text-align: center;}
-    .f_top_box {height: auto;}
-    .remove {display: none;}
-    .mb {padding: 0 20px;}
     .s_input, .sd_option {font-size: 12px;}
     .text_box > p {font-size: 17px !important;}
     .text_box > span {font-size: 13px !important;}

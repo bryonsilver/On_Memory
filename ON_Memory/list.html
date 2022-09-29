@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온메모리 - 고인찾기</title>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/list.css">
+
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/list.js"></script>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="h_top_box">
+                <div class="container">
+                    <div class="h_top">
+                        <a href="#">로그인</a>
+                        <a href="#">회원가입</a>
+                        <a href="#">장바구니</a>
+                        <a href="#">주문조회</a>
+                        <a href="#">마이쇼핑</a>
+                    </div>
+                </div>
+            </div>
+            <div class="h_logo_s">
+                <div class="container">
+                    <div class="h_logo_box">
+                        <div class="top_logo">
+                            <a href="./index.html"><div class="logo_fonts"><span class="logo_up">On</span> Memory</div></a>
+                        </div>
+                        <div class="top_search">
+                            <div class="s_box">
+                                <div class="s_bar">
+                                    <div class="s_dropdown">
+                                        <div class="sd_option">고인명</div>
+                                        <ul class="sd_ul">
+                                            <li class="sd_li">고인명</li>
+                                            <li class="sd_li">상주명</li>
+                                            <li class="sd_li">가족명</li>
+                                            <li class="sd_li">전화번호</li>
+                                        </ul>
+                                    </div>
+                                    <div class="s_field">
+                                        <input type="text" class="s_input" placeholder="입력하세요">
+                                        <a href="#" class="s_btn">
+                                            <img src="./img/search_btn.png" alt="s_btn_img" class="s_btn_img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title_area">
+                <h2>고인 찾기</h2>
+                <span class="t_prev">
+                    <a href="#"><img src="./img/pre_arrow.png" alt="pre_arrow" class="pre_arrow"></a>
+                </span>
+            </div>
+            <div class="header_bottom">
+                <div class="font_head"><h2>고인 찾기</h2></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <!-- <div class="deceased_list">
+                    <ul>
+                        <li class="de_list">
+                            <div class="online_list">
+                                <div class="on_list">
+                                    <div class="corner_ribon"></div>
+                                    <div class="corner_ribon"></div>
+                                </div>
+                                <div class="on_list_info">
+                                    <p class="name">
+                                        <font>故</font>
+                                        <font class="con1">
+                                            <font>김구</font>
+                                            <font>(72세/남)</font>
+                                        </font>
+                                    </p>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>배우자</b>
+                                            <font class="con6_1">최여옥, 최준례</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>아들</b>
+                                            <font class="con6_2">김인, 김신</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>딸</b>
+                                            <font class="con6_3">김씨, 김화경, 김은경</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>사위</b>
+                                            <font class="con6_4">김호연</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>며느리</b>
+                                            <font class="con6_5">안미생</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>손자</b>
+                                            <font class="con6_6">김진</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>빈소</b>
+                                            <font class="con6_7">1949년 07월 05일</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>발인</b>
+                                            <font class="con6_8">경교장</font>
+                                        </p>
+                                    </div>
+                                    <div class="info_list">
+                                        <p class="labe1">
+                                            <b>장지</b>
+                                            <font class="con6_9">효창공원</font>
+                                        </p>
+                                    </div>
+                                    <a href="" title="조문하기">조문하기</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pagination_box">
+                    <div class="pagination">
+                        <a href="#" class="btn_prev">◀</a>
+                        <a href="#" class="btn_prev">1</a>
+                        <a href="#" class="btn_prev">▶</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="f_top_box">
+                <div class="f_top">
+                    <a href="#" class="remove">ABOUT US</a>
+                    <a href="#">AGREEMENT</a>
+                    <a href="#"><strong>PRIVACY POLICY</strong></a>
+                    <a href="#">GUIDE</a>
+                </div>
+            </div>
+            <div class="f_bottom_box">
+                <div class="f_bottom desk_top">
+                    <span>개발자 : Bryon Silver(Dr.은 명)</span>
+                    <!-- <a href="#">[사업자정보확인]</a> <br> -->
+                    <span>TEL : 010-7751-8275  /  E-Mail : <a href="mailto:bryonsilver@gmail.com">bryonsilver@gmail.com</a> </span> <br>
+                    <span>Copyright © 온메모리</span> <br><br>
+                    <a href="https://iniweb.inicis.com/popup/common/popup_escrow_notice.jsp?mid=ECAemcoec9">
+                        <img src="./img/escrow_60x60_gray.png" alt="footer_inipay_img" class="f_inipay_img">
+                    </a>
+                </div>
+                <div class="f_bottom mb">
+                    <span>개발자 : Bryon Silver(Dr.은 명)</span>
+                    <!-- <a href="#">[사업자정보확인]</a> <br> -->
+                    <span>TEL : 010-7751-8275</span>
+                    <span>E-Mail :  <a href="mailto:bryonsilver@gmail.com">bryonsilver@gmail.com</a> </span>  <br><br>
+                    <span class="mar">Copyright © 온메모리</span> <br><br>
+                    <a href="https://iniweb.inicis.com/popup/common/popup_escrow_notice.jsp?mid=ECAemcoec9">
+                        <img src="./img/escrow_60x60_gray.png" alt="footer_inipay_img" class="f_inipay_img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
