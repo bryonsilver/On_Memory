@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/list.css">
 
     <script defer src="./js/common.js"></script>
+    <script src="./js/pro_list.js"></script>
     <script defer src="./js/list.js"></script>
     <script src="./js/jquery-2.1.4.min.js"></script>
 
@@ -38,12 +39,12 @@
                             <div class="s_box">
                                 <div class="s_bar">
                                     <div class="s_dropdown">
-                                        <div class="sd_option">고인명</div>
-                                        <ul class="sd_ul">
-                                            <li class="sd_li">고인명</li>
-                                            <li class="sd_li">상주명</li>
-                                            <li class="sd_li">가족명</li>
-                                            <li class="sd_li">전화번호</li>
+                                        <div class="d_option">고인명</div>
+                                        <ul class="d_ul">
+                                            <li class="d_li sd1">고인명</li>
+                                            <li class="d_li sd2">상주명</li>
+                                            <li class="d_li sd3">가족명</li>
+                                            <li class="d_li sd4">전화번호</li>
                                         </ul>
                                     </div>
                                     <div class="s_field">
@@ -70,90 +71,243 @@
         </div>
 
         <div class="main">
+            <div class="write_box">
+                <a href="#" class="btn_write">글쓰기</a>
+            </div>
             <div class="container">
-                <!-- <div class="deceased_list">
-                    <ul>
-                        <li class="de_list">
+                <div class="deceased_list">
+                    <ul class="de_ul">
+                        <!-- <li class="de_list">
+                            <input type="checkbox" class="board_chk" value="27">
                             <div class="online_list">
                                 <div class="on_list">
-                                    <div class="corner_ribon"></div>
-                                    <div class="corner_ribon"></div>
-                                </div>
-                                <div class="on_list_info">
-                                    <p class="name">
-                                        <font>故</font>
-                                        <font class="con1">
-                                            <font>김구</font>
-                                            <font>(72세/남)</font>
-                                        </font>
-                                    </p>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>배우자</b>
-                                            <font class="con6_1">최여옥, 최준례</font>
+                                    <div class="corner_ribon top_left"></div>
+                                    <div class="corner_ribon top_right"></div>
+                               
+                                    <div class="on_list_info">
+                                        <p class="name">
+                                            
+                                            <span class="con1">
+                                                <span><span>故</span>김구</span>
+                                                <span>(72세/남)</span>
+                                            </span>
                                         </p>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>배우자</b>
+                                                <span class="con6_1">최여옥, 최준례</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>아들</b>
+                                                <span class="con6_2">김인, 김신</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>딸</b>
+                                                <span class="con6_3">김씨, 김화경, 김은경</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>사위</b>
+                                                <span class="con6_4">김호연</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>며느리</b>
+                                                <span class="con6_5">안미생</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>손자</b>
+                                                <span class="con6_6">김진</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>빈소</b>
+                                                <span class="con6_7">1949년 07월 05일</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>발인</b>
+                                                <span class="con6_8">경교장</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>장지</b>
+                                                <span class="con6_9">효창공원</span>
+                                            </p>
+                                        </div>
+                                        <a href="" title="조문하기" class="info_btn">조문하기</a>
                                     </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>아들</b>
-                                            <font class="con6_2">김인, 김신</font>
-                                        </p>
-                                    </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>딸</b>
-                                            <font class="con6_3">김씨, 김화경, 김은경</font>
-                                        </p>
-                                    </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>사위</b>
-                                            <font class="con6_4">김호연</font>
-                                        </p>
-                                    </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>며느리</b>
-                                            <font class="con6_5">안미생</font>
-                                        </p>
-                                    </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>손자</b>
-                                            <font class="con6_6">김진</font>
-                                        </p>
-                                    </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>빈소</b>
-                                            <font class="con6_7">1949년 07월 05일</font>
-                                        </p>
-                                    </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>발인</b>
-                                            <font class="con6_8">경교장</font>
-                                        </p>
-                                    </div>
-                                    <div class="info_list">
-                                        <p class="labe1">
-                                            <b>장지</b>
-                                            <font class="con6_9">효창공원</font>
-                                        </p>
-                                    </div>
-                                    <a href="" title="조문하기">조문하기</a>
                                 </div>
                             </div>
                         </li>
+                        <li class="de_list">
+                            <input type="checkbox" class="board_chk" value="27">
+                            <div class="online_list">
+                                <div class="on_list">
+                                    <div class="corner_ribon top_left"></div>
+                                    <div class="corner_ribon top_right"></div>
+                               
+                                    <div class="on_list_info">
+                                        <p class="name">
+                                            <span class="con1">
+                                                <span><span>故</span>김구</span>
+                                                <span>(72세/남)</span>
+                                            </span>
+                                        </p>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>배우자</b>
+                                                <span class="con6_1">최여옥, 최준례</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>아들</b>
+                                                <span class="con6_2">김인, 김신</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>딸</b>
+                                                <span class="con6_3">김씨, 김화경, 김은경</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>사위</b>
+                                                <span class="con6_4">김호연</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>며느리</b>
+                                                <span class="con6_5">안미생</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>손자</b>
+                                                <span class="con6_6">김진</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>빈소</b>
+                                                <span class="con6_7">1949년 07월 05일</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>발인</b>
+                                                <span class="con6_8">경교장</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>장지</b>
+                                                <span class="con6_9">효창공원</span>
+                                            </p>
+                                        </div>
+                                        <a href="" title="조문하기" class="info_btn">조문하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="de_list">
+                            <input type="checkbox" class="board_chk" value="27">
+                            <div class="online_list">
+                                <div class="on_list">
+                                    <div class="corner_ribon top_left"></div>
+                                    <div class="corner_ribon top_right"></div>
+                               
+                                    <div class="on_list_info">
+                                        <p class="name">
+                                           
+                                            <span class="con1">
+                                                <span><span>故</span>김구</span>
+                                                <span>(72세/남)</span>
+                                            </span>
+                                        </p>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>배우자</b>
+                                                <span class="con6_1">최여옥, 최준례</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>아들</b>
+                                                <span class="con6_2">김인, 김신</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>딸</b>
+                                                <span class="con6_3">김씨, 김화경, 김은경</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>사위</b>
+                                                <span class="con6_4">김호연</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>며느리</b>
+                                                <span class="con6_5">안미생</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>손자</b>
+                                                <span class="con6_6">김진</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>빈소</b>
+                                                <span class="con6_7">1949년 07월 05일</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>발인</b>
+                                                <span class="con6_8">경교장</span>
+                                            </p>
+                                        </div>
+                                        <div class="info_list">
+                                            <p class="labe1">
+                                                <b>장지</b>
+                                                <span class="con6_9">효창공원</span>
+                                            </p>
+                                        </div>
+                                        <a href="" title="조문하기" class="info_btn">조문하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="pagination_box">
                     <div class="pagination">
-                        <a href="#" class="btn_prev">◀</a>
-                        <a href="#" class="btn_prev">1</a>
-                        <a href="#" class="btn_prev">▶</a>
+                        <a href="#" class="btn_prev pr_hover">◀</a>
+                        <a href="#" class="btn_prev brwon">1</a>
+                        <a href="#" class="btn_prev pr_hover">▶</a>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
 
