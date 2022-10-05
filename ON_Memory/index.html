@@ -22,25 +22,29 @@
                     <div class="logo_box">
                         <a href="#"><div class="logo">On Memory<!--<img src="" alt="">--></div></a>
                     </div>
-                    <div class="search_box">
-                        <div class="search_bar">
-                            <div class="search_dropdown">
-                                <div class="sd_option">고인명</div>
-                                <ul class="sd_ul">
-                                    <li class="sd_li sd1">고인명</li>
-                                    <li class="sd_li sd2">상주명</li>
-                                    <li class="sd_li sd3">가족명</li>
-                                    <li class="sd_li sd4">전화번호</li>
-                                </ul>
-                            </div>
-                            <div class="search_field">
-                                <input type="text" class="s_input" placeholder="입력하세요">
-                                <a href="./list.html" class="search_btn">
-                                    <img src="./img/search_btn.png" alt="search_btn_img" class="s_btn_img">
-                                </a>
+                    <form action="./list.html">
+                        <div class="search_box">
+                            <div class="search_bar">
+                                <div class="search_dropdown">
+                                    <div class="sd_option">고인명</div>
+                                    <ul class="sd_ul">
+                                        <li class="sd_li sd1">고인명</li>
+                                        <li class="sd_li sd2">상주명</li>
+                                        <li class="sd_li sd3">가족명</li>
+                                        <li class="sd_li sd4">전화번호</li>
+                                    </ul>
+                                </div>
+                                <div class="search_field">
+                                    <input type="text" id="s_input" placeholder="입력하세요" >
+                                    <input type="hidden" name="s_val" id="s_val" value="">
+                                    <a href="./list.html" class="search_btn">
+                                        <button><img src="./img/search_btn.png" alt="search_btn_img" class="s_btn_img"></button>
+                                        
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                     <div class="text_box">
                         <p>검색창에 고인명을 검색하세요.</p>
                         <span>삼가 고인의 명복을 빕니다</span>

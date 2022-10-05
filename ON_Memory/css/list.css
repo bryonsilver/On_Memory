@@ -47,6 +47,9 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 100px;
+
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .board_chk {
@@ -194,6 +197,11 @@
     color: #fff;
 }
 
+.s_btn button {
+    border: none;
+    background: none;
+}
+
 
 @media (max-width: 1150px) {
     .de_list {
@@ -311,4 +319,7 @@
         left: -110px;
         -webkit-transform: rotate(-57deg);
     }
+    .s_btn {padding-right: 5px !important;}
+    .s_btn_img {width: 25px;}
+    .s_dropdown {width: 40%;}
 }

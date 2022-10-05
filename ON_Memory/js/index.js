@@ -24,4 +24,12 @@ $(document).ready(function(){
         $('.sd_option').html('전화번호')
         $('.sd_ul').slideUp("fast")
     })
+
+    
+    $('#s_input').bind('input', function() {
+        var value = $(this).val() // get the current value of the input field.
+        console.log(value) 
+        $('#s_val').attr('value', value);
+    });
+    
 })
