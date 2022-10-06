@@ -27,9 +27,9 @@
     font-size: 13px;
     border-radius: 2px;
     color:  #fff;
-    border: 1px solid #3c3c3c;
-    border-bottom-color: #3c3c3c;
-    background: #3c3c3c;
+    border: 1px solid #31571b;
+    border-bottom-color: #31571b;
+    background: #31571b;
 }
 /* .write_box::after {
     content: "";
@@ -187,20 +187,17 @@
     line-height: 40px;
 }
 .brwon {
-    background-color: #755c51;
+    background-color: #31571b;
     color: #fff;
-    border: 1px solid #755c51;
+    border: 1px solid #31571b;
 }
 .pr_hover:hover {
-    background-color: #755c51;
-    border: 1px solid #755c51;
+    background-color: #31571b;
+    border: 1px solid #31571b;
     color: #fff;
 }
 
-.s_btn button {
-    border: none;
-    background: none;
-}
+
 
 
 @media (max-width: 1150px) {

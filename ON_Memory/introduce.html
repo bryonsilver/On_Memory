@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김구/김인 온라인 장례식장 - 온메모리</title>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href=".//css/introduce.css">
+
+    <script defer src="./js/common.js"></script>
+    <script src="./js/pro_list.js"></script>
+    <script defer src="./js/introduce.js"></script>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+
+</head>
+<body>
+    <div class="bottom_nav">
+        <div>
+            <a href="#tab_1" id="tab_1" >첫 페이지로 가기</a>
+            <a href="#tab_2" id="tab_2" >고인의 걸어온 길</a>
+            <a href="#tab_3" id="tab_3" >고인의 생전모습</a>
+            <a href="#tab_4" id="tab_4" >화환/부조함 보내기</a>
+            <a href="#tab_5" id="tab_5" >장례식장 안내</a>
+            <a href="#tab_6" id="tab_6" >장례식장 둘러보기</a>
+            <a href="#tab_7" id="tab_7" >고인에게 남기는 이야기</a>
+            <a href="#tab_8" id="tab_8" >계좌안내</a>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="header">
+            <div class="h_top_box">
+                <div class="container">
+                    <div class="h_top">
+                        <a href="#">로그인</a>
+                        <a href="#">회원가입</a>
+                        <a href="#">장바구니</a>
+                        <a href="#">주문조회</a>
+                        <a href="#">마이쇼핑</a>
+                    </div>
+                </div>
+            </div>
+            
+            <form action="./list.html">
+                <div class="h_logo_s">
+                    <div class="container">
+                        <div class="h_logo_box">
+                            <div class="top_logo">
+                                <a href="./index.html"><div class="logo_fonts"><span class="logo_up">On</span> Memory</div></a>
+                            </div>
+                            <div class="top_search">
+                                <div class="s_box">
+                                    <div class="s_bar">
+                                        <div class="s_dropdown">
+                                            <div class="d_option">고인명</div>
+                                            <ul class="d_ul">
+                                                <li class="d_li sd1">고인명</li>
+                                                <li class="d_li sd2">상주명</li>
+                                                <li class="d_li sd3">가족명</li>
+                                                <li class="d_li sd4">전화번호</li>
+                                            </ul>
+                                        </div>
+                                        <div class="s_field">
+                                            <input type="text" class="s_input" id="s_input" placeholder="입력하세요">
+                                            <input type="hidden" name="s_val" id="s_val" value="">
+                                            <a href="#" class="s_btn">
+                                                <button><img src="./img/search_btn.png" alt="s_btn_img" class="s_btn_img"></button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="title_area">
+                <h2>고인 소개</h2>
+                <span class="t_prev">
+                    <a href="#"><img src="./img/pre_arrow.png" alt="pre_arrow" class="pre_arrow"></a>
+                </span>
+            </div>
+            <div class="header_bottom">
+                <div class="font_head"><h2>고인 소개</h2></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="tab_1">
+                <div>
+                    <div class="grid_left">
+                        <div><img src="./img/deceased/kim_gu.jpg" alt="de_img" class="de_img"></div>
+                    </div>
+                    <div class="grid_right">
+                        <div class="gr_con1">1949년 06월 25일 별세</div>
+                        <div class="gr_con2">
+                            <span>故</span>
+                            <span>김구</span>
+                            <span>(72세/남)</span>
+                        </div>
+                        <div class="gr_con_box">
+                            <div class="gr_con3">
+                                <div class="con_title">상주</div>
+                                <span>김 인</span>
+                            </div>
+                            <div class="gr_con4">
+                                <div class="con_title">배우자</div>
+                                <span>최여옥, 최준례</span>
+                            </div>
+                            <div class="gr_con5">
+                                <div class="con_title">아들</div>
+                                <span>김인, 김신</span>
+                            </div>
+                            <div class="gr_con6">
+                                <div class="con_title">딸</div>
+                                <span>김씨, 김화경, 김은경</span>
+                            </div>
+                            <div class="gr_con7">
+                                <div class="con_title">사위</div>
+                                <span>김호연</span>
+                            </div>
+                            <div class="gr_con8">
+                                <div class="con_title">며느리</div>
+                                <span>안미생</span>
+                            </div>
+                            <div class="gr_con9">
+                                <div class="con_title">손자</div>
+                                <span>김진</span>
+                            </div>
+                        </div>
+                        <div class="gr_con_box2">
+                            <div class="gr_con10">
+                                <div class="con_title">빈소</div>
+                                <span>경고장</span>
+                            </div>
+                            <div class="gr_con11">
+                                <div class="con_title">발인</div>
+                                <span>1949년 07월 05일</span>
+                            </div>
+                            <div class="gr_con12">
+                                <div class="con_title">장지</div>
+                                <span>효창공원</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="share_box">
+                <ul class="sns_go">
+                    <li class="sns_li">
+                        <img src="./img/deceased/link_share.png" alt="link_share_img" class="share_icon">
+                    </li>
+                    <li class="sns_li">
+                        <img src="./img/deceased/message_share.png" alt="message_share_img" class="share_icon">
+                    </li>
+                    <li class="sns_li">
+                        <img src="./img/deceased/kakao_share.png" alt="kakao_share_img" class="share_icon">
+                    </li>
+                </ul>
+            </div>
+            <div class="tab3_histroy">
+                <div class="div_layout">
+                    <div class="tab_3_slider_title">
+                        <h1>고인이 걸어온 길</h1>
+                        <div class="paper">
+                            <p>
+                                4세 때 심한 천연두를 앓아 가까스로 목숨을 건졌고, 9세에 한글과 한문을 배우기 시작하였으며, 아버지의 열성으로 집안에 서당을 세웠다. 14세에 『통감』·『사략』과 병서를 즐겨 읽었으며, 15세에는 정문재(鄭文哉)의 서당에서 본격적인 한학수업에 정진하였고, 17세에 조선왕조 최후의 과거에 응시하였으나 뜻을 이루지 못하였다. 벼슬자리를 사고 파는 부패된 세태에 울분을 참지 못하여 18세에 동학에 입도하였으며, 황해도 도유사(都有司)의 한 사람으로 뽑혀 제2대 교주 최시형(崔時亨)을 만났다. 19세에 팔봉접주(八峰接主)가 되어 동학군의 선봉장으로 해주성(海州城)을 공략하였는데, 이 사건으로 1895년 신천 안태훈(安泰勳)의 집에 은거하며, 당시 그의 아들 중근(重根)과도 함께 지냈다. 또한, 해서지방의 선비 고능선(高能善) 문하에서 훈도를 받았고, 항일의식을 참지 못하여 압록강을 건너 남만주 김이언(金利彦)의 의병부대에 몸담았다. 을미사변으로 충격을 받고 귀향을 결심, 1896년 2월 안악 치하포(鴟河浦)에서 쓰치다[土田讓亮]를 맨손으로 처단하여 21세의 의혈청년으로 국모의 원한을 푸는 첫 거사를 결행하였다. 그 해 5월 집에서 은신중 체포되어 해주감옥에 수감되었고, 7월 인천 감리영(監理營)에 이감되었으며, 다음해인 1897년 사형이 확정되었다. 사형직전에 집행정지령이 내려져 생명을 건질수 있었지만, 석방이 되지 않아 이듬해 봄에 탈옥하였다.
+                            </p>
+                            <p>
+                                삼남일대를 떠돌다가 공주 마곡사에 입산하여 승려가 되어 원종(圓宗)이란 법명을 받았고, 1899년 서울 새절(봉원사)을 거쳐 평양 근교 대보산(大寶山)영천암(靈泉庵)의 주지가 되었다가 몇 달 만에 환속하였다. 수사망을 피해 다니면서도 황해도 장연에서 봉양학교(鳳陽學校) 설립을 비롯하여, 교단 일선에서 계몽·교화사업을 전개하였으며, 20대 후반에 기독교에 입교하여 진남포예수교회 에버트청년회(Evert靑年會) 총무로 일했다.
+                            </p>
+                        </div>
+                        <div class="tab_3_his_more_btn">더보기</div>
+                    </div>
+                    <div class="tab_3_tabs">
+                        <input type="radio" name="a" id="tab_one" tabindex="1" checked>
+                        <input type="radio" name="a" id="tab_two" tabindex="2">
+                        <input type="radio" name="a" id="tab_three" tabindex="3">
+
+                        <div class="tab_3_tabs_nav">
+                            <font>
+                                <label for="tab_one">생전 사진</label>
+                            </font>
+                            <font>
+                                <label for="tab_two">생전 영상</label>
+                            </font>
+                            <font>
+                                <label for="tab_three">유품영상</label>
+                            </font>
+                        </div>
+                        <div class="tab_3_tabs_content tab_one"></div>
+                        <div class="tab_3_tabs_content tab_two">
+                            <div class="tab_3_ucc">
+                                <iframe src="https://www.youtube.com/embed/3hknq6pw010" frameborder="0" style="border: 0px; position: absoulte; top: 0px; left: 0px; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="tab_3_tabs_content tab_three">
+                            <div class="tab_3_ucc">
+                                <iframe src="https://www.youtube.com/embed/2XAsqbbhmuQ" frameborder="0" style="border: 0px; position: absoulte; top: 0px; left: 0px; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab_2">
+                <div class="buttons">
+                    <p>
+                        <a href="#" class="trigger">근조화환 보내기</a>
+                        <a href="#" class="trigger">부조함 보내기</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tab_3">
+                <div class="div_layout">
+                    <h1>장례식장 안내</h1>
+                    <div class="grid_1eft"></div>
+                    <div class="grid_right">
+                        <div>
+                            <ul>
+                                <li><h3 class="title">경고장</h3></li>
+                                <li>
+                                    <span class="link_copy">
+                                        <span>서울특별시 종로구 새문안로 29</span>
+                                        <span class="copy_img">
+                                            <img src="./img/deceased/copy_icon.png" alt="copy_icon">
+                                            <font>복사</font>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <div class="custom_btn location_btn_k" id="locationBtn">길찾기(카카오맵)</div>
+                                </li>
+                                <li>
+                                    <div class="custom_btn location_btn_n" id="locationBtn">길찾기(네이버지도)</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab4">
+                <div class="div_layout">
+                    <h1>장레식장 둘러보기</h1>
+                    <div class="tab_4_ucc">
+                        <iframe src="https://www.youtube.com/embed/PivKUpGnSGk" frameborder="0" style="border: 0px; position: absoulte; top: 0px; left: 0px; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab_5">
+            <div class="div_layout">
+                <h1>고인에게 남기는 이야기</h1>
+                <font>고인에게 조문글을 남겨주세요.</font>
+
+                <!-- 댓글 입력 -->
+                <div class="tab_5_input"></div>
+                <!-- 댓글 목록 -->
+                <div class="tab_5_list">
+                    <ul class="t5_ul">
+                        <li class="t5_li">
+                            <div class="info">
+                                <p class="writer">
+                                    <strong>작성자</strong>
+                                    <a href="#none">이엠테스트(emtest20)</a>
+                                </p>
+                                <p class="regdate">
+                                    <strong>작성일</strong>2021-01-25 15:32:26
+                                </p>
+                            </div>
+                            <div class="content">
+                                삼가고인의 명복을 빕니다.
+                            </div>
+                            <div class="delete_btn">
+                                <button>삭제</button>
+                            </div>
+                        </li>
+                        <li class="t5_li">
+                            <div class="info">
+                                <p class="writer">
+                                    <strong>작성자</strong>
+                                    <a href="#none">이엠테스트(emtest20)</a>
+                                </p>
+                                <p class="regdate">
+                                    <strong>작성일</strong>2021-01-25 15:32:26
+                                </p>
+                            </div>
+                            <div class="content">
+                                삼가고인의 명복을 빕니다.
+                            </div>
+                            <div class="delete_btn">
+                                <button>삭제</button>
+                            </div>
+                        </li>
+                        <li class="t5_li">
+                            <div class="info">
+                                <p class="writer">
+                                    <strong>작성자</strong>
+                                    <a href="#none">이엠테스트(emtest20)</a>
+                                </p>
+                                <p class="regdate">
+                                    <strong>작성일</strong>2021-01-25 15:32:26
+                                </p>
+                            </div>
+                            <div class="content">
+                                삼가고인의 명복을 빕니다.
+                            </div>
+                            <div class="delete_btn">
+                                <button>삭제</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pagination_box">
+                <div class="pagination">
+                    <a href="#" class="btn_prev pr_hover">◀</a>
+                    <a href="#" class="btn_prev brwon">1</a>
+                    <a href="#" class="btn_prev pr_hover">▶</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab_6">
+            <div class="div_layout">
+                <h1>계좌안내</h1>
+                <div class="tab_6_grid_box">
+                    <div class="grid_1">김신</div>
+                    <div class="grid_2">우리은행</div>
+                    <div class="grid_3">123-456-78912</div>
+                    <div class="grid_4">
+                        <select name="bank" class="bank_link" >
+                            <option value>인터넷뱅킹 바로가기</option>
+                            <option value="">국민은행</option>
+                            <option value="">제일은행</option>
+                            <option value="">우리은행</option>
+                            <option value="">기업은행</option>
+                            <option value="">광주은행</option>
+                            <option value="">대구은행</option>
+                            <option value="">하나은행</option>
+                            <option value="">신한은행</option>
+                            <option value="">전북은행</option>
+                            <option value="">부산은행</option>
+                            <option value="">한미은행</option>
+                            <option value="">제주은행</option>
+                            <option value="">경남은행</option>
+                            <option value="">우체국</option>
+                            <option value="">농협</option>
+                        </select>
+                        <div class="select_arrow"></div>
+                    </div>
+                </div>
+                <div class="grid_5">
+                    <button class="white_btn">계좌복사</button>
+                </div>
+                <div class="grid_6">
+                    <img src="./img/deceased/k_pay_icon.png" alt="k_pay">
+                    <img src="./img/deceased/toss_icon.png" alt="toss">
+                    <img src="./img/deceased/n_pay_icon.png" alt="n_pay">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="f_top_box">
+                <div class="f_top">
+                    <a href="#" class="remove">ABOUT US</a>
+                    <a href="#">AGREEMENT</a>
+                    <a href="#"><strong>PRIVACY POLICY</strong></a>
+                    <a href="#">GUIDE</a>
+                </div>
+            </div>
+            <div class="f_bottom_box">
+                <div class="f_bottom desk_top">
+                    <span>개발자 : Bryon Silver(Dr.은 명)</span>
+                    <!-- <a href="#">[사업자정보확인]</a> <br> -->
+                    <span>TEL : 010-7751-8275  /  E-Mail : <a href="mailto:bryonsilver@gmail.com">bryonsilver@gmail.com</a> </span> <br>
+                    <span>Copyright © 온메모리</span> <br><br>
+                    <a href="https://iniweb.inicis.com/popup/common/popup_escrow_notice.jsp?mid=ECAemcoec9">
+                        <img src="./img/escrow_60x60_gray.png" alt="footer_inipay_img" class="f_inipay_img">
+                    </a>
+                </div>
+                <div class="f_bottom mb">
+                    <span>개발자 : Bryon Silver(Dr.은 명)</span>
+                    <!-- <a href="#">[사업자정보확인]</a> <br> -->
+                    <span>TEL : 010-7751-8275</span>
+                    <span>E-Mail :  <a href="mailto:bryonsilver@gmail.com">bryonsilver@gmail.com</a> </span>  <br><br>
+                    <span class="mar">Copyright © 온메모리</span> <br><br>
+                    <a href="https://iniweb.inicis.com/popup/common/popup_escrow_notice.jsp?mid=ECAemcoec9">
+                        <img src="./img/escrow_60x60_gray.png" alt="footer_inipay_img" class="f_inipay_img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

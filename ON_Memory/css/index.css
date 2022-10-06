@@ -50,7 +50,7 @@
     display: flex;
     height: 55px;
     background-color: #fff;
-    border: 5px solid #3b2e28;
+    border: 5px solid #3b2e28;  /* #31571b */
     box-sizing: border-box;
 }
 .search_dropdown {
