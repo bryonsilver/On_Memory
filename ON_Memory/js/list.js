@@ -112,7 +112,7 @@ $(document).ready(function(){
                                             <span class="con6_9">${DECEASED[0][s_val_1].burial_grounds}</span>
                                         </p>
                                     </div>
-                                    <a href="" title="조문하기" class="info_btn">조문하기</a>
+                                    <a href="./introduce.html" title="조문하기" class="info_btn">조문하기</a>
                                 </div>
                             </div>
                         </div>
