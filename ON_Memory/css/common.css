@@ -254,6 +254,39 @@ span {
 }
 
 
+
+.pagination_box {
+    display: inline-block;
+    width: 100%;
+    
+    text-align: center;
+}
+.pagination {
+    display: inline-block;
+    font-size: 14px;
+}
+.btn_prev {
+    background-color: #ddd;
+    color: #606060;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    line-height: 40px;
+}
+.brwon {
+    background-color: #31571b;
+    color: #fff;
+    border: 1px solid #31571b;
+}
+.pr_hover:hover {
+    background-color: #31571b;
+    border: 1px solid #31571b;
+    color: #fff;
+}
+
+
+
 @media (max-width: 1250px) {
     .s_btn {padding-right: 30px !important;}
 }
