@@ -21,15 +21,22 @@ input, select {
 
     color: #f2f2f2;
     font-size: 17px;
-    padding: 0 15px;
     box-sizing: border-box;
 
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 999;
+
+    transition: all .4s linear;
 }
-.icon {display: none;}
+
+.icon {
+    display: none;
+}
+.bn_m_active {
+    display: none;
+}
 .bn_active {
     background-color: #31571b;
 }
@@ -45,14 +52,14 @@ input, select {
 }
 
 
-.tab_1 {
+#tab_1 {
     width: 100%;
     height: auto;
     background-color: #f5f5f5;
     padding: 50px 0 0 0;
     box-sizing: border-box;
 }
-.tab_1 > div {
+#tab_1 > div {
     width: 100%;
     max-width: 1100px;
     margin: auto;
@@ -143,7 +150,7 @@ input, select {
 
 
 /* 고인이 걸어온 길 */
-.tab_3_tabs {
+#tab_3_tabs {
     position: relative;
     height: 817px;
 }
@@ -171,7 +178,7 @@ input, select {
     top: 97px;
     height: 800px;
 } 
-.tab3_histroy {
+#tab3_histroy {
     width: 100%;
     height: auto;
     padding: 50px 0;
@@ -239,13 +246,13 @@ input, select {
     font-weight: 600;
 }
 
-.tab_3_tabs input {
+#tab_3_tabs input {
     display: none;
 }
 
-.tab_3_tabs input[id='tab_three']:checked ~ .tab_3_tabs_nav label[for='tab_three'],
-.tab_3_tabs input[id='tab_two']:checked ~ .tab_3_tabs_nav label[for='tab_two'],
-.tab_3_tabs input[id='tab_one']:checked ~ .tab_3_tabs_nav label[for='tab_one'] {
+#tab_3_tabs input[id='tab_three']:checked ~ .tab_3_tabs_nav label[for='tab_three'],
+#tab_3_tabs input[id='tab_two']:checked ~ .tab_3_tabs_nav label[for='tab_two'],
+#tab_3_tabs input[id='tab_one']:checked ~ .tab_3_tabs_nav label[for='tab_one'] {
     background-color: #fff;
     color: #000;
     cursor: default;
@@ -341,17 +348,17 @@ input, select {
 
 
 /* 근조화환, 부조함 보내기 */
-.tab_2 {
+#tab_2 {
     width: 100%;
     height: auto;
     background-color: #f5f5f5;
     padding: 50px 0;
 }
-.tab_2 p {
+#tab_2 p {
     text-align: center;
     color: #fff;
 }
-.tab_2 .trigger {
+#tab_2 .trigger {
     width: 28%;
     border-radius: 5px;
     position: relative;
@@ -368,7 +375,7 @@ input, select {
 }
 
 /* 장레식장 안내 */
-.tab_3 {
+#tab_3 {
     width: 100%;
     height: auto;
     background-color: #fff;
@@ -422,7 +429,7 @@ input, select {
 
 
 /* 장례식장 둘러보기 */
-.tab4 {
+#tab_4 {
     width: 100%;
     height: auto;
     background-color: #f5f5f5;
@@ -443,7 +450,7 @@ input, select {
 }
 
 /* 고인에게 남기는 이야기 */
-.tab_5 {
+#tab_5 {
     width: 100%;
     height: auto;
     background-color: #fff;
@@ -583,7 +590,7 @@ input, select {
 
 
 /* 계좌안내 */
-.tab_6 {
+#tab_6 {
     width: 100%;
     background-color: #f5f5f5;
     padding: 50px 0;
@@ -657,7 +664,16 @@ input, select {
 }
 .grid_6 img {width: 64px; margin: 0 5px;}
 
+.footer {
+    margin-bottom: 50px;
+}
 
+@media (max-width: 1346px) {
+    .footer {
+        margin-bottom: 100px;
+    }
+    
+} 
 @media (max-width: 1300px) {
     .div_layout {padding: 0 15px; box-sizing: border-box;}
     .grid_right2 {padding: 0 20px;}
@@ -665,7 +681,7 @@ input, select {
 @media (max-width: 1300px) {.grid_right2 {padding: 0 ;}}
 @media (max-width: 1020px) {
     .buttons {padding: 0 15px; box-sizing: border-box;}
-    .tab_2 .trigger {
+    #tab_2 .trigger {
         width: 100%;
         margin-top: 10px;
     }
@@ -677,26 +693,29 @@ input, select {
     .swiper-wrapper {height: auto !important;}
     .swiper {height: 590px !important;}
     .sw {top: 70px;}
-    .tab_3_tabs {height: 657px;}
+    #tab_3_tabs {height: 657px;}
     .tab_3_tabs_content {
         height: 650px;
+    }
+    .footer {
+        margin-bottom: 100px;
     }
 }
 @media (max-width: 1000px) {
     .sw {top: 120px;}
-    .tab_3_tabs {height: 697px;}
+    #tab_3_tabs {height: 697px;}
     .tab_4_ucc {height: 600px;}
 }
 @media (max-width: 850px) {
-    .tab_1 > div {
+    #tab_1 > div {
         gap: 50px;
     }
-    .tab_3_tabs {height: 627px;}
+    #tab_3_tabs {height: 627px;}
     .sw {top: 100px;}
     .tab_4_ucc {height: 500px;}
 }
 @media (max-width: 767px) {
-    .tab_1 > div {
+    #tab_1 > div {
         display: table;
     }
     .grid_right {margin: auto; width: 100%; margin-top: 30px;}
@@ -715,7 +734,7 @@ input, select {
     .grid_common {width: calc((100% - 25px) / 2);}
     .grid_3 {width: 100% !important;}
 
-    .tab_3_tabs {height: 527px;}
+    #tab_3_tabs {height: 527px;}
     .sw {top: 90px;}
     .grid_1eft2 {height: 400px;}
     .tab_4_ucc {height: 400px;}
@@ -723,17 +742,20 @@ input, select {
         height: 500px;
     }
 }
+@media (max-width: 713px)  {
+    .footer {margin-bottom: 150px;}
+}
 @media (max-width: 700px) {
     .tab_3_tabs_nav {flex-direction: column; gap: 10px;}
     .tab_3_tabs_nav font {width: 100%;}
 
     .tab_3_tabs_content  {top: 207px;}
-    .tab_3_tabs {height: 617px;}
+    #tab_3_tabs {height: 617px;}
     .sw {top: 80px;}
 }
 
 @media (max-width: 622px) {
-    .tab_3_tabs {height: 547px;}
+    #tab_3_tabs {height: 547px;}
 }
 @media (max-width: 601px) {
     .sw {top: 70px;}
@@ -741,24 +763,26 @@ input, select {
 }
 @media (max-width: 600px) {
     .swiper {height: 380px !important;}
-    .tab_3_tabs {height: 577px;}
+    #tab_3_tabs {height: 577px;}
     .sw {top: 140px;}
 
     .bottom_nav {
         overflow: hidden;
         padding: 0;
     }
-    .bottom_nav a  {width: 100%; text-align: center;}
+    .icon,.bottom_nav a  {width: 100%; text-align: center;}
     .icon {display: block; background-color: #555555;}
     #tab2, #tab3, #tab4, #tab5, #tab6, #tab7, #tab8{display: none;}
+    .bottom_nav > div {flex-direction: column;}
 
     .tab_3_tabs_content {
         height: 450px;
         top: 200px;
     }
+    .footer {margin-bottom: 100px;}
 }
 @media (max-width: 520px) {
-    .tab_3_tabs {height: 530px;}
+    #tab_3_tabs {height: 530px;}
     .sw {top: 120px;}
     .grid_1eft2 {height: 300px;}
     .tab_4_ucc {height: 250px;}
@@ -767,10 +791,10 @@ input, select {
     }
 }
 @media (max-width: 430px) {
-    .tab_3_tabs {height: 470px;}
+    #tab_3_tabs {height: 470px;}
     .sw {top: 100px;}
-    .tab_6 h1,.tab_3_slider_title h1,.tab_2 h1 ,.tab_3 h1 ,.tab4 h1 {font-size: 28px; text-align: center;}
-    .tab_5 h1 {font-size: 24px; text-align: center;}
+    #tab_6 h1,.tab_3_slider_title h1,#tab_2 h1 ,#tab_3 h1 ,#tab_4 h1 {font-size: 28px; text-align: center;}
+    #tab_5 h1 {font-size: 24px; text-align: center;}
     .tab_3_tabs_content {
         height: 350px;
     }
@@ -800,7 +824,7 @@ input, select {
     .password input {width: 70%;}
 }
 @media (max-width: 370px) {
-    .tab_3_tabs {height: 420px;}
+    #tab_3_tabs {height: 420px;}
     .sw {top: 80px;}
     .link_copy {flex-direction: column; font-size: 17px;}
     .grid_1eft2 {height: 210px;}
@@ -813,7 +837,7 @@ input, select {
     }
 }
 @media (max-width: 260px) {
-    .tab_3_tabs {height: 360px;}
+    #tab_3_tabs {height: 360px;}
     .sw {top: 60px;}
     .tab_4_ucc {height: 100px;}
     .tab_3_tabs_content {

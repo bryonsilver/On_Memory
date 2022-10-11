@@ -21,16 +21,16 @@
 </head>
 <body>
     <div class="bottom_nav">
-        <div>
-            <a href="#tab_1" id="tab1" >첫 페이지로 가기</a>
-            <a href="#tab_2" id="tab2" >고인의 걸어온 길</a>
-            <a href="#tab_3" id="tab3" >고인의 생전모습</a>
-            <a href="#tab_4" id="tab4" >화환/부조함 보내기</a>
-            <a href="#tab_5" id="tab5" >장례식장 안내</a>
-            <a href="#tab_6" id="tab6" >장례식장 둘러보기</a>
-            <a href="#tab_7" id="tab7" >고인에게 남기는 이야기</a>
-            <a href="#tab_8" id="tab8" >계좌안내</a>
-            <a href="javascript:void(0)" class="icon">페이지 바로가기</a>
+        <div class="indi">
+            <a href="#tab_1" class="tab_bottom bn_active t1" >첫 페이지로 가기</a>
+            <a href="#tab3_histroy" class="tab_bottom t3_h" >고인의 걸어온 길</a>
+            <a href="#tab_3_tabs" class="tab_bottom t3_t" >고인의 생전모습</a>
+            <a href="#tab_2" class="tab_bottom t2" >화환/부조함 보내기</a>
+            <a href="#tab_3" class="tab_bottom t3" >장례식장 안내</a>
+            <a href="#tab_4" class="tab_bottom t4" >장례식장 둘러보기</a>
+            <a href="#tab_5" class="tab_bottom t5" >고인에게 남기는 이야기</a>
+            <a href="#tab_6" class="tab_bottom t6" >계좌안내</a>
+            <div class="icon">페이지 바로가기</div>
         </div>
     </div>
     <div class="wrap">
@@ -91,7 +91,7 @@
             </div>
         </div>
         <div class="main">
-            <div class="tab_1">
+            <div id="tab_1">
                 <div>
                     <div class="grid_left">
                         <div><img src="./img/deceased/kim_gu.jpg" alt="de_img" class="de_img"></div>
@@ -164,7 +164,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tab3_histroy">
+            <div id="tab3_histroy">
                 <div class="div_layout">
                     <div class="tab_3_slider_title">
                         <h1>고인이 걸어온 길</h1>
@@ -178,20 +178,20 @@
                         </div>
                         <div class="tab_3_his_more_btn custom_btn">더보기</div>
                     </div>
-                    <div class="tab_3_tabs">
+                    <div id="tab_3_tabs">
                         <input type="radio" name="a" id="tab_one" tabindex="1" checked>
                         <input type="radio" name="a" id="tab_two" tabindex="2">
                         <input type="radio" name="a" id="tab_three" tabindex="3">
 
                         <div class="tab_3_tabs_nav">
                             <font>
-                                <label for="tab_one" id="tab_1">생전 사진</label>
+                                <label for="tab_one" id="tab_On">생전 사진</label>
                             </font>
                             <font>
-                                <label for="tab_two" id="tab_2">생전 영상</label>
+                                <label for="tab_two" id="tab_Tw">생전 영상</label>
                             </font>
                             <font>
-                                <label for="tab_three" id="tab_3">유품영상</label>
+                                <label for="tab_three" id="tab_Th">유품영상</label>
                             </font>
                         </div>
                         <div class="tab_3_tabs_content tab_one">
@@ -257,19 +257,19 @@
                         </div>
                         <div class="tab_3_tabs_content tab_two">
                             <div class="tab_3_ucc">
-                                <iframe src="https://www.youtube.com/embed/3hknq6pw010" frameborder="0" style="border: 0px; position: absoulte; top: 0px; left: 0px; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <iframe width="100%" height="100%" src="http://www.youtube.com/embed/3hknq6pw010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="tab_3_tabs_content tab_three">
                             <div class="tab_3_ucc">
-                                <iframe src="https://www.youtube.com/watch?v=naSLyvzMlk0" frameborder="0" style="border: 0px; position: absoulte; top: 0px; left: 0px; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/90ORR3hVqEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="tab_2">
+            <div id="tab_2">
                 <div class="buttons">
                     <p>
                         <a href="#" class="trigger">근조화환 보내기</a>
@@ -278,7 +278,7 @@
                 </div>
             </div>
 
-            <div class="tab_3">
+            <div id="tab_3">
                 <div class="div_layout">
                     <h1>장례식장 안내</h1>
                     <div class="grid_box">
@@ -311,17 +311,17 @@
                 </div>
             </div>
 
-            <div class="tab4">
+            <div id="tab_4">
                 <div class="div_layout">
                     <h1>장레식장 둘러보기</h1>
                     <div class="tab_4_ucc">
-                        <iframe src="https://www.youtube.com/embed/PivKUpGnSGk" frameborder="0" style="border: 0px; position: absoulte; top: 0px; left: 0px; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="http://www.youtube.com/embed/PivKUpGnSGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="tab_5">
+        <div id="tab_5">
             <div class="div_layout">
                 <h1>고인에게 남기는 이야기</h1>
                 <font class="tab_5_font">고인에게 조문글을 남겨주세요.</font>
@@ -417,7 +417,7 @@
             </div>
         </div>
 
-        <div class="tab_6">
+        <div id="tab_6">
             <div class="div_layout">
                 <h1>계좌안내</h1>
                 <div class="tab_6_grid_box">

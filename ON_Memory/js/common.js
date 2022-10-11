@@ -26,6 +26,7 @@ $(document).ready(function(){
         $('.d_ul').slideUp("fast")
     })
 
+    
 
 
 })
