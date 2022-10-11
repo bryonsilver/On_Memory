@@ -90,12 +90,6 @@ $(document).ready(function(){
         $(this).addClass('bn_active')
     })
 
-
-
-    
-    
-    $(window).resize(function() {
-        // 스크롤 이동하면 indi 변경
         let tab_1_o_top = $('#tab_1').offset().top - 100;
         let tab_3_his_o_top = $('#tab3_histroy').offset().top - 100;
         let tab_3_tabs__o_top = $('#tab_3_tabs').offset().top - 100;
@@ -113,6 +107,66 @@ $(document).ready(function(){
         let tab_4_o_bot = tab_4_o_top + $('#tab_4').outerHeight();
         let tab_5_o_bot = tab_5_o_top + $('#tab_5').outerHeight();
         let tab_6_o_bot = tab_6_o_top + $('#tab_6').outerHeight();
+
+        $(window).scroll(function() {
+            let s_top = $(window).scrollTop();
+    
+            if(tab_1_o_top <= s_top && s_top < tab_1_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+               $('.t1').addClass('bn_active')
+               $('.tab_bottom').show()
+                console.log(0)
+            }
+            else if(tab_3_his_o_top <= s_top && s_top < tab_3_his_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+               $('.t3_h').addClass('bn_active')
+               $('.tab_bottom').show()
+                console.log(1)
+            }
+            else if(tab_3_tabs__o_top <= s_top && s_top < tab_3_tabs_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+               $('.t3_t').addClass('bn_active')
+               $('.tab_bottom').show()
+                console.log(2)
+            }
+            else if(tab_2_o_top <= s_top && s_top < tab_2_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+               $('.t2').addClass('bn_active')
+               $('.tab_bottom').show()
+                console.log(3)
+            }
+            else if(tab_3_o_top <= s_top && s_top < tab_3_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+               $('.t3').addClass('bn_active')
+               $('.tab_bottom').show()
+                console.log(4)
+            }
+            else if(tab_4_o_top <= s_top && s_top < tab_4_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+               $('.t4').addClass('bn_active')
+               $('.tab_bottom').show()
+                console.log(5)
+            }
+            else if(tab_5_o_top <= s_top && s_top < tab_5_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+               $('.t5').addClass('bn_active')
+               $('.tab_bottom').show()
+                console.log(6)
+            }
+            else if(tab_6_o_top <= s_top && s_top < tab_6_o_bot) {
+                $('.bottom_nav a').removeClass('bn_active')
+                $('.t6').addClass('bn_active')
+                $('.tab_bottom').show()
+                console.log(7)
+            }
+            
+        })
+
+    
+    
+    $(window).resize(function() {
+        // 스크롤 이동하면 indi 변경
+        
 
         var width = window.innerWidth;
         if(width <= 600) {
@@ -143,42 +197,34 @@ $(document).ready(function(){
                 if(tab_1_o_top <= s_top && s_top < tab_1_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(20)
                 }
                 else if(tab_3_his_o_top <= s_top && s_top < tab_3_his_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(21)
                 }
                 else if(tab_3_tabs__o_top <= s_top && s_top < tab_3_tabs_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(22)
                 }
                 else if(tab_2_o_top <= s_top && s_top < tab_2_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(23)
                 }
                 else if(tab_3_o_top <= s_top && s_top < tab_3_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(24)
                 }
                 else if(tab_4_o_top <= s_top && s_top < tab_4_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(25)
                 }
                 else if(tab_5_o_top <= s_top && s_top < tab_5_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(26)
                 }
                 else if(tab_6_o_top <= s_top && s_top < tab_6_o_bot) {
                     $('.tab_bottom').hide()
                     $('.bn_active').show()
-                    console.log(27)
                 }
                 
             })
@@ -188,60 +234,6 @@ $(document).ready(function(){
             $('.bn_active').show()
             $('.bottom_nav a').click(function(){
                 $('.tab_bottom').css({display: 'block'})
-            })
-
-            $(window).scroll(function() {
-                let s_top = $(window).scrollTop();
-        
-                if(tab_1_o_top <= s_top && s_top < tab_1_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                   $('.t1').addClass('bn_active')
-                   $('.tab_bottom').show()
-                    console.log(0)
-                }
-                else if(tab_3_his_o_top <= s_top && s_top < tab_3_his_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                   $('.t3_h').addClass('bn_active')
-                   $('.tab_bottom').show()
-                    console.log(1)
-                }
-                else if(tab_3_tabs__o_top <= s_top && s_top < tab_3_tabs_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                   $('.t3_t').addClass('bn_active')
-                   $('.tab_bottom').show()
-                    console.log(2)
-                }
-                else if(tab_2_o_top <= s_top && s_top < tab_2_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                   $('.t2').addClass('bn_active')
-                   $('.tab_bottom').show()
-                    console.log(3)
-                }
-                else if(tab_3_o_top <= s_top && s_top < tab_3_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                   $('.t3').addClass('bn_active')
-                   $('.tab_bottom').show()
-                    console.log(4)
-                }
-                else if(tab_4_o_top <= s_top && s_top < tab_4_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                   $('.t4').addClass('bn_active')
-                   $('.tab_bottom').show()
-                    console.log(5)
-                }
-                else if(tab_5_o_top <= s_top && s_top < tab_5_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                   $('.t5').addClass('bn_active')
-                   $('.tab_bottom').show()
-                    console.log(6)
-                }
-                else if(tab_6_o_top <= s_top && s_top < tab_6_o_bot) {
-                    $('.bottom_nav a').removeClass('bn_active')
-                    $('.t6').addClass('bn_active')
-                    $('.tab_bottom').show()
-                    console.log(7)
-                }
-                
             })
         }
     }).resize();

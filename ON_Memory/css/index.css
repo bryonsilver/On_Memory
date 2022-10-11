@@ -43,7 +43,7 @@
 .search_box {
     display: block;
     width: 100%;
-    max-width: 670px;
+    max-width: 450px;
     margin: 50px auto 0 auto;
 }
 .search_bar {
@@ -145,7 +145,6 @@
 
 
 @media (max-width: 890px) {
-    .main_center {width: 70% !important;}
     .text_box > p {font-size: 25px !important;}
     .text_box > span {font-size: 15px !important;}
     .search_dropdown {
