@@ -65,16 +65,16 @@ span {
     left: 0;
     right: 0;
     z-index: 999999999; */
-    padding: 50px 0;
+    padding: 40px 0 25px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
 .top_logo {
     width: 20%;
-    font-size: 30px;
+    font-size: 40px;
     color: #31571b;
     display: inline-block;
     line-height: 50px;
@@ -84,7 +84,7 @@ span {
 
 /* search bar */
 .top_search {
-    width: 75%;
+    width: 65%;
 }
 .search_box {
     margin: 0;
@@ -94,11 +94,11 @@ span {
     align-items: center;
     width: 100%;
     border: 3px solid #31571b;
-    height: 50px;
+    height: 45px;
 }
 .s_dropdown {
     position: relative;
-    width: 13%;
+    width: 18%;
     border-right: 2px solid #dde2f1;
 }
 
@@ -113,7 +113,7 @@ span {
     content: "";
     position: absolute;
     top: 8px;
-    right: 15px;
+    right: 10px;
     border: 8px solid;
     border-color: #31571b transparent transparent transparent;
 }
@@ -161,8 +161,8 @@ span {
 }
 
 .s_field {
-    width: 100%;
-    max-width: 800px;
+    width: 80%;
+    /* max-width: 800px; */
     height: auto;
     position: relative;
     display: flex;

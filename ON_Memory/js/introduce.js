@@ -238,11 +238,139 @@ $(document).ready(function(){
         }
     }).resize();
 
-    // $(window).resize(function(){
-    //     var width = window.innerWidth;
-    //     if(width <= 600){
-    //         $('.mySwiper4').css({display: 'none'})
-    //     }
-	// }).resize();
+
+    //naver 지도 - 주소->좌표변환
+    //function get_pointer (해당주소,대상지도 id,title) {
+        function get_pointer(address, getid, title) {
+            naver.maps.Service.geocode(
+                {
+                    address : address
+                },
+                function(status, response) {
+                    if (status !== naver.maps.Service.Status.OK) {
+                        //return alert('Something wrong!');
+                        console.log('주소에러');
+                    }
+    
+                    var result = response.result, // 검색 결과의 컨테이너
+                        items = result.items; // 검색 결과의 배열
+    
+                    // do Something
+                    x = eval(items[0].point.x);
+                    y = eval(items[0].point.y);
+                    
+                   // alert(x+"/"+y);
+    
+                    var HOME_PATH = window.HOME_PATH || '.';
+    
+                    var cityhall = new naver.maps.LatLng(y, x), map = new naver.maps.Map(
+                        'map', {
+                            /* 변경점 */
+                            useStyleMap: true,
+                            center : cityhall.destinationPoint(
+                                0, 200),
+                            zoom : 15
+                        }), marker = new naver.maps.Marker({
+                        map : map,
+                        position : cityhall
+                    });
+    
+                    map.setOptions({ //지도 인터랙션 끄기 --이동
+                        draggable : false,
+                        pinchZoom : false,
+                        scrollWheel : false,
+                        keyboardShortcuts : false,
+                        disableDoubleTapZoom : false,
+                        disableDoubleClickZoom : false,
+                        disableTwoFingerTapZoom : false
+                    });
+    
+                    //내용넣기
+                    var conent_div=address ;
+                    var contentString =$(".tab_3 .grid_right2 ul li").eq(0).html()+ $(".tab_3 .grid_r ul li .address m").html();
+    
+                    /*var contentString = [
+                        '<div class="iw_inner" style="padding: 0 5px;">',
+                        ' <h5>' + title + '</h5>',
+                        ' <p><span style="font-size:14px;">' + address_title +'</span> </p>',
+                        '<p><a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+                        '   </p>',
+                        '</div>'
+                    ].join('');*/
+    
+                    var infowindow = new naver.maps.InfoWindow({
+                        content : contentString
+                    });
+    
+                    //교통편
+                    //모바일인식용
+                    var filter2 = "win16|win32|win64|mac|macintel"; //pc
+                    var iPad_Keys2 = (navigator.userAgent.match(/(iPad)/)  ||  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) );
+                    //pc,mobile 구분
+                    var url_page_N, url_page_K; //네이버지도 url , 카카오맵 지도 url
+                    if ( navigator.platform ) {
+                        if ( filter2.indexOf( navigator.platform.toLowerCase() ) < 0  || iPad_Keys2) {
+                            //mobile
+                            url_page_N='nmap://route/public?dlat='+y+'&dlng='+x+'&dname='+title.replace(/<\/?[^>]+(>|$)/g, "")+'&appname=com.example.myapp:';
+                            url_page_K='kakaomap://route?ep='+y+','+x+'&by='+title.replace(/<\/?[^>]+(>|$)/g, "");
+                        } else {
+                            //pc
+                            url_page_N= 'https://map.naver.com/v5/directions/-/'+x+','+y+','+title.replace(/<\/?[^>]+(>|$)/g, "")+'/-/transit';
+                            url_page_K='https://map.kakao.com/link/to/'+title.replace(/<\/?[^>]+(>|$)/g, "")+','+y+','+x;
+                        }
+                    }
+    
+    
+                    /*naver.maps.Event.addListener(marker,"click",function(e) {
+                        //overlay = e.overlay, // marker
+                        //position = overlaygetPosition(),
+                        url=url_page;
+                        /* url = 'http://map.naver.com/index.nhn?enc=utf8&level=2&lng='
+                                    + position
+                                            .lng()
+                                    + '&lat='
+                                    + position
+                                            .lat()
+                                    + '&pinTitle='
+                                    + office
+                                    + '&pinType=SITE'; */
+    
+                        /*window.open(url);
+                    });*/
+    
+                    infowindow.open(map, marker);
+    
+                    // 길찾기 버튼 클릭이벤트 - 네이버
+                    var locationBtn_N = $('.location_btn_N');
+    
+                    locationBtn_N.click(function() {
+    
+                        window.open(url_page_N,  '_self');
+                        event.preventDefault();
+                    });
+                    
+                     // 길찾기 버튼 클릭이벤트 - 카카오톡
+                    var locationBtn_K = $('.location_btn_K');
+    
+                    locationBtn_K.click(function() {
+    
+                        window.open(url_page_K,  '_self');
+                        event.preventDefault();
+                    });
+                                    
+    
+    
+                    //카카오톡 버튼 이벤트
+                    /*$(".kakao_link").click(function() {
+    
+                        sendLinkDefault();
+                        event.preventDefault();
+                    });*/
+                     sendLinkDefault();
+    
+    
+                });
+        }
+
 })
 

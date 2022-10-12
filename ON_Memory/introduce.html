@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>김구/김인 온라인 장례식장 - 온메모리</title>
 
     <link rel="stylesheet" href="./css/common.css">
@@ -15,8 +15,6 @@
     <script defer src="./js/introduce.js"></script>
     <script src="./js/jquery-2.1.4.min.js"></script>
     <script src="./js/swiper_de.js"></script>
-
-   
 
 </head>
 <body>
@@ -283,7 +281,25 @@
                     <h1>장례식장 안내</h1>
                     <div class="grid_box">
                         <div class="grid_1eft2">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.435448225467!2d126.96529591564804!3d37.56836273178056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca28facdb1783%3A0xfd1c8cae3da88775!2z7ISc7Jq47Yq567OE7IucIOyiheuhnOq1rCDsg4jrrLjslYjroZwgMjk!5e0!3m2!1sko!2skr!4v1665111764850!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <!-- * 카카오맵 - 지도퍼가기 -->
+                            <!-- 1. 지도 노드 -->
+                            <div id="daumRoughmapContainer1665552788672" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                            <!--
+                                2. 설치 스크립트
+                                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                            -->
+                            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                            <!-- 3. 실행 스크립트 -->
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                    "timestamp" : "1665552788672",
+                                    "key" : "2czfw",
+                                    "mapWidth" : "882",
+                                    "mapHeight" : "500"
+                                }).render();
+                            </script>
                         </div>
                         <div class="grid_right2">
                             <div>
@@ -299,10 +315,10 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <div class="custom_btn location_btn_k" id="locationBtn">길찾기(카카오맵)</div>
+                                        <div class="custom_btn location_btn_K" id="locationBtn">길찾기(카카오맵)</div>
                                     </li>
                                     <li>
-                                        <div class="custom_btn location_btn_n" id="locationBtn">길찾기(네이버지도)</div>
+                                        <div class="custom_btn location_btn_N" id="locationBtn">길찾기(네이버지도)</div>
                                     </li>
                                 </ul>
                             </div>
@@ -319,143 +335,144 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="tab_5">
+                <div class="div_layout">
+                    <h1>고인에게 남기는 이야기</h1>
+                    <font class="tab_5_font">고인에게 조문글을 남겨주세요.</font>
 
-        <div id="tab_5">
-            <div class="div_layout">
-                <h1>고인에게 남기는 이야기</h1>
-                <font class="tab_5_font">고인에게 조문글을 남겨주세요.</font>
-
-                <!-- 댓글 입력 -->
-                <div class="tab_5_input">
-                    <div class="member">
-                        <input type="hidden" id="board_no" value="" name="board_no">
-                        <input type="hidden" id="no" value="" name="no">
-                        <input type="hidden" id="comment_no" value="" name="comment_no">
-                        <div class="board_comment_write">
-                            <div class="info">
-                                <p class="name">
-                                    <span class="label">이름</span>
-                                    <input type="text" name="comment_name" id="comment_name" fw-label="댓글작성자" fw-filter="isFill" fw-msg value>
-                                </p>
-                                <p class="password">
-                                    <span class="label">비밀번호</span>
-                                    <input type="text" name="comment_pw" id="comment_pw" fw-label="댓글비밀번호 fw-filter="isFill" fw-msg value">
-                                </p>
+                    <!-- 댓글 입력 -->
+                    <div class="tab_5_input">
+                        <div class="member">
+                            <input type="hidden" id="board_no" value="" name="board_no">
+                            <input type="hidden" id="no" value="" name="no">
+                            <input type="hidden" id="comment_no" value="" name="comment_no">
+                            <div class="board_comment_write">
+                                <div class="info">
+                                    <p class="name">
+                                        <span class="label">이름</span>
+                                        <input type="text" name="comment_name" id="comment_name" fw-label="댓글작성자" fw-filter="isFill" fw-msg value>
+                                    </p>
+                                    <p class="password">
+                                        <span class="label">비밀번호</span>
+                                        <input type="text" name="comment_pw" id="comment_pw" fw-label="댓글비밀번호 fw-filter="isFill" fw-msg value">
+                                    </p>
+                                </div>
+                                <div class="comment">
+                                    <span class="label hide">내용</span>
+                                    <textarea name="comment" id="comment" fw-filter="isFill" fw-label="댓글내용" fw-msg></textarea>
+                                </div>
                             </div>
-                            <div class="comment">
-                                <span class="label hide">내용</span>
-                                <textarea name="comment" id="comment" fw-filter="isFill" fw-label="댓글내용" fw-msg></textarea>
-                            </div>
+                            <div class="add_btn"><button type="button">댓글등록</button></div>
                         </div>
-                        <div class="add_btn"><button type="button">댓글등록</button></div>
+                        <div class="n_member">
+                            <p>회원에게만 댓글 작성 권한이 있습니다.</p>
+                        </div>
                     </div>
-                    <div class="n_member">
-                        <p>회원에게만 댓글 작성 권한이 있습니다.</p>
+                    <!-- 댓글 목록 -->
+                    <div class="tab_5_list">
+                        <ul class="t5_ul">
+                            <li class="t5_li">
+                                <div class="li_info">
+                                    <p class="writer">
+                                        <strong>작성자</strong>
+                                        <a href="#none">이엠테스트(emtest20)</a>
+                                    </p>
+                                    <p class="regdate">
+                                        <strong>작성일</strong>2021-01-25 15:32:26
+                                    </p>
+                                </div>
+                                <div class="content">삼가고인의 명복을 빕니다.</div>
+                                <div class="delete_btn"><button>삭제</button></div>
+                            </li>
+                            <li class="t5_li">
+                                <div class="li_info">
+                                    <p class="writer">
+                                        <strong>작성자</strong>
+                                        <a href="#none">이엠테스트(emtest20)</a>
+                                    </p>
+                                    <p class="regdate">
+                                        <strong>작성일</strong>2021-01-25 15:32:26
+                                    </p>
+                                </div>
+                                <div class="content">
+                                    삼가고인의 명복을 빕니다.
+                                </div>
+                                <div class="delete_btn">
+                                    <button>삭제</button>
+                                </div>
+                            </li>
+                            <li class="t5_li">
+                                <div class="li_info">
+                                    <p class="writer">
+                                        <strong>작성자</strong>
+                                        <a href="#none">이엠테스트(emtest20)</a>
+                                    </p>
+                                    <p class="regdate">
+                                        <strong>작성일</strong>2021-01-25 15:32:26
+                                    </p>
+                                </div>
+                                <div class="content">
+                                    삼가고인의 명복을 빕니다.
+                                </div>
+                                <div class="delete_btn">
+                                    <button>삭제</button>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <!-- 댓글 목록 -->
-                <div class="tab_5_list">
-                    <ul class="t5_ul">
-                        <li class="t5_li">
-                            <div class="li_info">
-                                <p class="writer">
-                                    <strong>작성자</strong>
-                                    <a href="#none">이엠테스트(emtest20)</a>
-                                </p>
-                                <p class="regdate">
-                                    <strong>작성일</strong>2021-01-25 15:32:26
-                                </p>
-                            </div>
-                            <div class="content">삼가고인의 명복을 빕니다.</div>
-                            <div class="delete_btn"><button>삭제</button></div>
-                        </li>
-                        <li class="t5_li">
-                            <div class="li_info">
-                                <p class="writer">
-                                    <strong>작성자</strong>
-                                    <a href="#none">이엠테스트(emtest20)</a>
-                                </p>
-                                <p class="regdate">
-                                    <strong>작성일</strong>2021-01-25 15:32:26
-                                </p>
-                            </div>
-                            <div class="content">
-                                삼가고인의 명복을 빕니다.
-                            </div>
-                            <div class="delete_btn">
-                                <button>삭제</button>
-                            </div>
-                        </li>
-                        <li class="t5_li">
-                            <div class="li_info">
-                                <p class="writer">
-                                    <strong>작성자</strong>
-                                    <a href="#none">이엠테스트(emtest20)</a>
-                                </p>
-                                <p class="regdate">
-                                    <strong>작성일</strong>2021-01-25 15:32:26
-                                </p>
-                            </div>
-                            <div class="content">
-                                삼가고인의 명복을 빕니다.
-                            </div>
-                            <div class="delete_btn">
-                                <button>삭제</button>
-                            </div>
-                        </li>
-                    </ul>
+
+                <div class="pagination_box margin">
+                    <div class="pagination">
+                        <a href="#" class="btn_prev pr_hover">◀</a>
+                        <a href="#" class="btn_prev brwon">1</a>
+                        <a href="#" class="btn_prev pr_hover">▶</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="pagination_box margin">
-                <div class="pagination">
-                    <a href="#" class="btn_prev pr_hover">◀</a>
-                    <a href="#" class="btn_prev brwon">1</a>
-                    <a href="#" class="btn_prev pr_hover">▶</a>
+            <div id="tab_6">
+                <div class="div_layout">
+                    <h1>계좌안내</h1>
+                    <div class="tab_6_grid_box">
+                        <div class="grid_1 grid_common">김신</div>
+                        <div class="grid_2 grid_common">우리은행</div>
+                        <div class="grid_3 grid_common">123-456-78912</div>
+                        <div class="grid_4 grid_common">
+                            <select name="bank" class="bank_link" >
+                                <option value>인터넷뱅킹 바로가기</option>
+                                <option value="">국민은행</option>
+                                <option value="">제일은행</option>
+                                <option value="">우리은행</option>
+                                <option value="">기업은행</option>
+                                <option value="">광주은행</option>
+                                <option value="">대구은행</option>
+                                <option value="">하나은행</option>
+                                <option value="">신한은행</option>
+                                <option value="">전북은행</option>
+                                <option value="">부산은행</option>
+                                <option value="">한미은행</option>
+                                <option value="">제주은행</option>
+                                <option value="">경남은행</option>
+                                <option value="">우체국</option>
+                                <option value="">농협</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+                    </div>
+                    <div class="grid_5">
+                        <button class="white_btn">계좌복사</button>
+                    </div>
+                    <div class="grid_6">
+                        <img src="./img/deceased/k_pay_icon.png" alt="k_pay">
+                        <img src="./img/deceased/toss_icon.png" alt="toss">
+                        <img src="./img/deceased/n_pay_icon.png" alt="n_pay">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="tab_6">
-            <div class="div_layout">
-                <h1>계좌안내</h1>
-                <div class="tab_6_grid_box">
-                    <div class="grid_1 grid_common">김신</div>
-                    <div class="grid_2 grid_common">우리은행</div>
-                    <div class="grid_3 grid_common">123-456-78912</div>
-                    <div class="grid_4 grid_common">
-                        <select name="bank" class="bank_link" >
-                            <option value>인터넷뱅킹 바로가기</option>
-                            <option value="">국민은행</option>
-                            <option value="">제일은행</option>
-                            <option value="">우리은행</option>
-                            <option value="">기업은행</option>
-                            <option value="">광주은행</option>
-                            <option value="">대구은행</option>
-                            <option value="">하나은행</option>
-                            <option value="">신한은행</option>
-                            <option value="">전북은행</option>
-                            <option value="">부산은행</option>
-                            <option value="">한미은행</option>
-                            <option value="">제주은행</option>
-                            <option value="">경남은행</option>
-                            <option value="">우체국</option>
-                            <option value="">농협</option>
-                        </select>
-                        <div class="select_arrow"></div>
-                    </div>
-                </div>
-                <div class="grid_5">
-                    <button class="white_btn">계좌복사</button>
-                </div>
-                <div class="grid_6">
-                    <img src="./img/deceased/k_pay_icon.png" alt="k_pay">
-                    <img src="./img/deceased/toss_icon.png" alt="toss">
-                    <img src="./img/deceased/n_pay_icon.png" alt="n_pay">
-                </div>
-            </div>
-        </div>
+        
 
         <div class="footer">
             <div class="f_top_box">
@@ -489,7 +506,5 @@
             </div>
         </div>
     </div>
-
-
 </body>
 </html>

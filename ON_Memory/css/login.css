@@ -1,0 +1,174 @@
+body {font-family: 나눔명조,'Nanum Myeongjo',serif;}
+
+.main {
+    min-height: 600px;
+    margin-bottom: 50px;
+}
+.main_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.fir_view_box {
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.keyboard {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.btnkey {
+    border: none;
+    background: none;
+    font-size: 12px;
+    color: #757575;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+    position: relative;
+    font-weight: 400;
+}
+.btnkey::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 13px;
+    height: 8px;
+    margin: -3px 0 0;
+    background: url(../img/ico_toggle_arrow_down.png) no-repeat 0 50%;
+    background-size: 100% 100%;
+}
+
+.btn_active {
+    color: #111;
+    border: none;
+}
+.btnkey.bk::before {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 13px;
+    height: 8px;
+    margin: -3px 0 0;
+    background: url(../img/ico_toggle_arrow_up.png) no-repeat 0 50%;
+    background-size: 100% 100%;
+}
+
+
+.btnkey_img {
+    width: 20%;
+    display: none;
+    margin: auto;
+}
+.btn_img_act{
+    display: block;
+}
+
+
+/* 로그인 박스 login_box */
+
+.login_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.login_idpw {
+    width: 100%;
+    height: 40px;
+    color: #353535;
+    border: 1px solid #d7d5d5;
+    border-radius: 2px;
+    outline-style: none;
+    padding: 0 40px 0 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.ssl {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+.ssl > img {
+    width: 14px;
+}
+
+
+.btnSubmit {
+    width: 100%;
+    height: 46px;
+    background-color: #444;
+    border: 1px solid #444;
+    color: #fff;
+    line-height: 46px;
+}
+
+.logun_util {
+    display: flex;
+    justify-content: center;
+    color: #858585;
+    gap: 20px;
+}
+.logun_util a {
+    /* padding: 0 15px; */
+    box-sizing: border-box;
+    position: relative;
+    font-size: 14px;
+}
+
+.line::before {
+    content: "";
+    width: 1px;
+    height: 13px;
+    background-color: #858585;
+    position: absolute;
+    top: 4px;
+    left: -10px;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 1000px) {
+    .btnkey_img {
+        width: 30%;
+    }
+}
+@media (max-width: 700px) {
+    .btnkey_img {
+        width: 40%;
+    }
+    .keyboard {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .main {
+        min-height: 400px;
+    }
+}
+@media (max-width: 500px) {
+    .btnkey_img {
+        width: 60%;
+    }
+}
+@media (max-width: 350px) {
+    .btnkey_img {
+        width: 80%;
+    }
+}
