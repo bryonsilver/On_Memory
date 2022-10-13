@@ -20,7 +20,7 @@ span {
 .container {
     width: 100%;
     max-width: 1260px;
-    min-width: 280px;
+    min-width: 200px;
     margin: 0 auto;
 }
 
@@ -65,7 +65,8 @@ span {
     left: 0;
     right: 0;
     z-index: 999999999; */
-    padding: 40px 0 25px 0;
+    padding: 40px 20px 25px 20px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,6 +80,10 @@ span {
     display: inline-block;
     line-height: 50px;
     font-weight: 700;
+}
+.logo_fonts {
+    display: flex;
+    gap: 12px;
 }
 
 
@@ -97,26 +102,37 @@ span {
     height: 45px;
 }
 .s_dropdown {
-    position: relative;
-    width: 18%;
+    width: 20%;
     border-right: 2px solid #dde2f1;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.arrow_box {
+    position: relative;
+}
+.arrow {
+    border: 8px solid;
+    border-color: #31571b transparent transparent transparent;
+    position: absolute;
+    top: 5px;
 }
 
 .d_option {
     width: 100%;
     font-weight: 600;
     font-size: 16px;
-    padding-left: 20px;
-    padding-top: 3px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
 }
-.s_dropdown:before {
+/* .s_dropdown:before {
     content: "";
     position: absolute;
     top: 8px;
     right: 10px;
     border: 8px solid;
     border-color: #31571b transparent transparent transparent;
-}
+} */
 .d_ul {
     width: 100%;
     font-weight: 600;
@@ -144,7 +160,7 @@ span {
     font-size: 15px;
     margin: 0;
     padding-left: 15px;
-    padding-right: 78px;
+    padding-right: 28px;
     color: #222;
     display: block;
     box-sizing: border-box;
@@ -166,16 +182,18 @@ span {
     height: auto;
     position: relative;
     display: flex;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 
 /* title_area */
 .title_area {
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     position: relative;
     text-align: center;
-    padding: 18px 0;
+    padding: 21px 0;
 }
 .title_area > h2 {
     margin: 0;
@@ -234,6 +252,8 @@ span {
 .f_bottom_box {
     background-color: #1f1c1b;
     padding: 30px 0;
+    padding-bottom: 50px;
+    box-sizing: border-box;
 }
 .f_bottom {
     width: 80%;
@@ -287,20 +307,17 @@ span {
 
 
 
-@media (max-width: 1250px) {
-    .s_btn {padding-right: 30px !important;}
-}
+
 @media (max-width: 1200px) {
     .s_field {
         justify-content: flex-end;width: 80%;
     }
-    .s_input {width: 90%;}
     .s_bar {justify-content: space-between;}
     .d_option {
         text-align: center;
         padding-left: 0 !important; 
     }
-    .s_dropdown {width: 19%;}
+    .s_dropdown {width: 30%;}
 }
 @media (max-width: 890px) {
     .desk_top {display: none;}
@@ -337,7 +354,6 @@ span {
     .s_btn_img {padding-top: 5px;}
     .d_option {padding-top: 0;}
     .s_dropdown:before {top: 6px;}
-    .top_search {width: 90%;}
     .h_top > a:nth-of-type(3) {
         display: none;
     }
@@ -349,15 +365,15 @@ span {
     }
     .top_search {
         margin: 0 15px 0 10px; 
+        width: 98%;
     }
 }
 @media (max-width: 680px) {
-    .s_dropdown {width: 24%;}
     .s_field {width: 70%;}
     .s_input {padding-right: 28px;}
 }
 @media (max-width: 530px) {
-   .s_dropdown { width: 29%;}
+   .s_dropdown { width: 35%;}
 }
 @media (max-width: 490px) {
     .f_top {flex-wrap: wrap; text-align: center;}
@@ -365,18 +381,21 @@ span {
     .remove {display: none;}
     .mb {padding: 0 20px;}
 }
-@media (max-width: 430px) {
-    .d_option {text-align: left; padding-left: 10px !important;}
+@media (max-width: 400px) {
+    .d_option {font-size: 15px; gap: 10px;}
+    .h_logo_s .container {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
 }
 @media (max-width: 340px) {
-    .s_btn {padding-right: 10px !important;}
-    .s_input{padding-left: 10px; padding-right: 15px;}
+    .s_input{padding-left: 0; padding-right: 5px;}
     .s_dropdown {width: 37%;}
+    .h_top {padding: 14px 5px;}
 }
 @media (max-width: 315px) {
     .h_top {
         gap: 5px;
-        padding: 14px 5px;
     }
     .h_top > a {padding: 0 4px 0 6px;}
     .s_field {width: 60%;}

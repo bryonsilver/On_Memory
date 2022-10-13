@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>온메모리 - 로그인</title>
+    <title>온메모리</title>
 
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/id_search.css">
+    <link rel="stylesheet" href="./css/pw_search.css">
 
     <script defer src="./js/common.js"></script>
     <script src="./js/pro_list.js"></script>
     <script src="./js/jquery-2.1.4.min.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/id_search.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -66,51 +67,72 @@
                 </div>
             </form>
             <div class="title_area">
-                <h2>로그인</h2>
+                <h2>비밀번호 찾기</h2>
+                <span class="t_prev">
+                    <a href="#"><img src="./img/btn_back.png" alt="pre_arrow" class="pre_arrow"></a>
+                </span>
             </div>
         </div>
 
         <div class="main">
             <div class="container">
-                <div>
-                    <form action="#" class="main_flex" id="member_form_45156484" method="post" target="_self" enctype="multipart/form-data">
-                        <input type="hidden" name="login" id="id" value="">
-                        <input type="hidden" name="login" id="pw" value="">
-
-                        <div class="fir_view_box">
-                            <div class="keyboard">
-                                <span class="btnkey korean" title="korean">
-                                    <span>한글자판</span>
-                                </span>
-                                <span class="btnkey special" title="special">
-                                    <span>특수문자</span>
-                                </span>
-                            </div>
-                            <img src="./img/img_keyboard.png" alt="keyboard" class="btnkey_img kor">
-                            <img src="./img/img_keyboard_special.png" alt="keyboard_special" class="btnkey_img spe">
+                <form action="" name="find_form" id="find_form" method="post" target="_self">
+                    <div class="id_search_box">
+                        <table border="1">
+                            <caption>비밀번호 찾기</caption>
+                            <colgroup>
+                                <col style="width: 100px;">
+                            </colgroup>
+        
+                            <tbody>
+                                <tr>
+                                    <th scope="row">회원구분</th>
+                                    <td>
+                                        <select name="search_type" id="id_search" >
+                                            <option value="indi" selected>개인회원</option>
+                                            <option value="indibuis">개인 사업자회원</option>
+                                            <option value="corp">법인 사업자회원</option>
+                                            <option value="fore">외국인회원</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">인증방법</th>
+                                    <td>
+                                        <label for="check_method" style="white-space: norwrap;">
+                                            <input type="radio" name="check_method" id="email_ch" checked> <span>이메일</span>
+                                        </label>
+                                        <label for="check_method" style="white-space: norwrap;">
+                                            <input type="radio" name="check_method" id="phone_ch" checked> <span>휴대폰번호</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="id text_box_input">아이디</th>
+                                    <td class="id_style">
+                                        <input type="text" name="id" id="id" placeholder="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="name text_box_input">이름</th>
+                                    <td>
+                                        <input type="text" name="name" id="name" placeholder="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="email text_box_input">이메일</th>
+                                    <td>
+                                        <input type="text" name="email" id="email" placeholder="" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+    
+                        <div class="base_btn">
+                            <a href="#none" class="btn_submit">확인</a>
                         </div>
-                        <div class="login_box">
-                            <div class="form">
-                                <input id="member_id" name="member_id" fw-filter="isFill" fw-label="아이디" fw-msg="" class="inputTypeText login_idpw" placeholder="아이디" value="" type="text">
-                                <input id="member_passwd" name="member_passwd" fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="패스워드" fw-msg="" class="login_idpw" autocomplete="off" value="" type="password" placeholder="패스워드">
-                            </div>
-                            <div class="option">
-                                <span class="ssl">
-                                    <img src="./img/ico_ssl.png" alt="보안접속">
-                                    <span>보안접속</span>
-                                </span>
-                            </div>
-                            <div class="login_btn">
-                                <button type="button" class="btnSubmit">로그인</button>
-                            </div>
-                            <div class="logun_util">
-                                <a href="./id_search.html">아이디찾기</a>
-                                <a href="./pw_search.html" class="line">비밀번호찾기</a>
-                                <a href="./sign_up.html" class="line">회원가입</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
 
